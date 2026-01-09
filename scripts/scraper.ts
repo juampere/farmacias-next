@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv';
-dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env.local' }); 
+dotenv.config();
 
 import axios from 'axios';
 import * as cheerio from 'cheerio';
