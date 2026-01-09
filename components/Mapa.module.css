@@ -1,0 +1,77 @@
+.popupContenedor {
+  text-align: center;
+  min-width: 150px;
+  font-family: sans-serif;
+}
+
+.popupImagen {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.popupIcono {
+  width: 100%;
+  height: 100px;
+  background-color: #e8f5e9;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.direccion {
+  margin: 4px 0 10px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.botonGps {
+  display: block;
+  background: #4285F4;
+  color: white !important;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Marcador circular con estilo */
+.marcadorCustom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a; /* Negro para farmacias cerradas */
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+
+/* Color especial si está de turno */
+.marcadorTurno {
+  background: #06D001; /* El verde que elegimos */
+  border-color: #ffffff;
+  animation: pulso 2s infinite; /* Un pequeño brillo para que se note */
+}
+
+@keyframes pulso {
+  0% { box-shadow: 0 0 0 0px rgba(45, 90, 39, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(45, 90, 39, 0); }
+  100% { box-shadow: 0 0 0 0px rgba(45, 90, 39, 0); }
+}

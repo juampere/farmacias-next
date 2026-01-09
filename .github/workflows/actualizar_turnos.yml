@@ -1,0 +1,22 @@
+name: Actualizar Farmacias de Turno
+on:
+  schedule:
+    - cron: '0 12 * * *' # Se ejecuta todos los días a las 9 AM (Hora Arg)
+  workflow_dispatch: # Permite ejecutarlo a mano desde GitHub
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar Scraper
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }} # Tenés que cargar esto en GitHub
+        run: npx tsx scripts/scraper.ts
